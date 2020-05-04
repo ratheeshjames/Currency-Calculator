@@ -1,17 +1,22 @@
 {
-    "name": "Currency Calculator",
-    "short_name": "Currency Calc",
-    "start_url": "/",
-    "display": "standalone",
-    "theme_color": "#0076ff",
-    "background_color": "#fff",
-    "icons": [{
-      "src": "/icons/icon192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },{
-      "src": "/icons/icon512.png",
+  "name": "Currency Calculator",
+  "short_name": "Currency Calc",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Reach without adding Contact",
+  "theme_color": "#3399ff",
+  "icons": [
+    {
+      "src": "./icons/icon512.png",
       "sizes": "512x512",
       "type": "image/png"
-    }]
-  }
+    },
+    {
+      "src": "./icons/icon192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+    
+  ]
+}
