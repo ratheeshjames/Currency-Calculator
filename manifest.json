@@ -3,7 +3,7 @@
   "short_name": "Currency Calc",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "fff",
+  "background_color": "#ffffff",
   "description": "Calculate Money for Deposit Easily",
   "theme_color": "#3399ff",
   "icons": [
