@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script> 
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log("Service Worker Registered"))
+        .catch(e => console.log(e));
+    }
+  </script>
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+ <ons-page id="main">
+     <ons-toolbar>
+         <div class="center">Currency Calculator</div>
+         <div class="right">
+             <ons-toolbar-button icon = "md-info" onclick="info()"></ons-toolbar-button>
+         </div>
+     </ons-toolbar>  
+     <!-- Alert Dialog -->     
+     <ons-alert-dialog id="infodia" modifier = "rowfooter">
+        <div class="alert-dialog-title">Currency Calculator</div>
+        <div class="alert-dialog-content">
+          This is Created By Ratheesh James!!
+        </div>
+        <div class="alert-dialog-footer">
+          <ons-alert-dialog-button onclick="hideAlertDialog()">Cancel</ons-alert-dialog-button>
+          <ons-alert-dialog-button onclick="hideAlertDialog()">OK</ons-alert-dialog-button>
+        </div>
+      </ons-alert-dialog>
+      <!-- Alert Dialog -->
+     <ons-list>
+         <ons-list-header>Enter Number Currency Notes Each</ons-list-header>
+         <!-- ₹5 -->
+         <ons-list-item>
+            Number of ₹5 Notes:
+             <ons-row>
+                <ons-col>
+                    <ons-input id="n5" modifier = "underbar" placeholder = "₹5" float type = "number" max = "500" onfocusout = "focusfn()"></ons-input>
+                </ons-col>
+                <a id = "n5res" style="margin-right: 20px; text-align: right;">₹0</a>
+            </ons-row>
+         </ons-list-item>
+         <!-- ₹10-->
+         <ons-list-item>
+            Number of ₹10 Notes:
+            <ons-row>
+               <ons-col>
+                   <ons-input id="n10" modifier = "underbar" placeholder = "₹10" float type = "number" max = "500" onfocusout = "focusfn()"></ons-input>
+               </ons-col>
+               <a id = "n10res" style="margin-right: 20px; text-align: right;">₹0</a>
+           </ons-row>
+        </ons-list-item>
+        <!-- ₹20 -->
+        <ons-list-item>
+            Number of ₹20 Notes:
+            <ons-row>
+               <ons-col>
+                   <ons-input id="n20" modifier = "underbar" placeholder = "₹20" float type = "number" max = "500" onfocusout = "focusfn()"></ons-input>
+               </ons-col>
+               <a id = "n20res" style="margin-right: 20px; text-align: right;">₹0</a>
+           </ons-row>
+        </ons-list-item>
+        <!-- ₹30 -->
+        <ons-list-item>
+            Number of ₹50 Notes:
+            <ons-row>
+               <ons-col>
+                   <ons-input id="n50" modifier = "underbar" placeholder = "₹50" float type = "number" max = "500" onfocusout = "focusfn()"></ons-input>
+               </ons-col>
+               <a id = "n50res" style="margin-right: 20px; text-align: right;">₹0</a>
+           </ons-row>
+        </ons-list-item>
+        <!-- ₹100 -->
+        <ons-list-item>
+            Number of ₹100 Notes:
+            <ons-row>
+               <ons-col>
+                   <ons-input id="n100" modifier = "underbar" placeholder = "₹100" float type = "number" max = "500" onfocusout = "focusfn()"></ons-input>
+               </ons-col>
+               <a id = "n100res" style="margin-right: 20px; text-align: right;">₹0</a>
+           </ons-row>
+        </ons-list-item>
+        <!-- ₹200 -->
+        <ons-list-item>
+            Number of ₹200 Notes:
+            <ons-row>
+               <ons-col>
+                   <ons-input id="n200" modifier = "underbar" placeholder = "₹200" float type = "number" max = "500" onfocusout = "focusfn()"></ons-input>
+               </ons-col>
+               <a id = "n200res" style="margin-right: 20px; text-align: right;">₹0</a>
+           </ons-row>
+        </ons-list-item>
+        <!-- ₹500 -->
+        <ons-list-item>
+            Number of ₹500 Notes:
+            <ons-row>
+               <ons-col>
+                   <ons-input id="n500" modifier = "underbar" placeholder = "₹500" float type = "number" max = "500" onfocusout = "focusfn()"></ons-input>
+               </ons-col>
+               <a id = "n500res" style="margin-right: 20px; text-align: right;">₹0</a>
+           </ons-row>
+        </ons-list-item>
+        <!-- ₹1000 -->
+        <ons-list-item>
+            Number of ₹1000 Notes:
+            <ons-row>
+               <ons-col>
+                   <ons-input id="n1000" modifier = "underbar" placeholder = "₹1000" float type = "number" max = "500" onfocusout = "focusfn()"></ons-input>
+               </ons-col>
+               <a id = "n1000res" style="margin-right: 20px; text-align: right;">₹0</a>
+           </ons-row>
+        </ons-list-item>
+        <!-- ₹2000 -->
+        <ons-list-item>
+            Number of ₹2000 Notes:
+            <ons-row>
+               <ons-col>
+                   <ons-input id="n2000" modifier = "underbar" placeholder = "₹2000" float type = "number" max = "500" onfocusout = "focusfn()"></ons-input>
+               </ons-col>
+               <a id = "n2000res" style="margin-right: 20px; text-align: right;">₹0</a>
+           </ons-row>
+        </ons-list-item>
+     </ons-list>      
+     <ons-card>
+         <div class = "title">Total</div>
+         <div class = "content">
+             <p id = "totalres" style="font-size:xx-large; color: #0076ff;">₹0</p>
+         </div>
+     </ons-card>           
+ </ons-page> 
+ <script src="main.js"></script>
+</body>
+</html>
