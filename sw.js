@@ -7,7 +7,8 @@ const staticAssets = [
   'https://unpkg.com/onsenui/css/onsen-css-components.min.css',
   'https://unpkg.com/onsenui/js/onsenui.min.js',
   'icons/icon192.png',
-  'icons/icon512.png'
+  'icons/icon512.png',
+  'icons/icon144.png'
 ];
 self.addEventListener('install', async event => {
   console.log('install event');
